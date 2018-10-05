@@ -1,0 +1,18 @@
+CHANGE DATE COMMANDS REQUIRES SUDO PRIVILEGES
+
+IN ORDER TO AVOID SUDO PASSWORD INPUT USE NEXT WORKAROUND:
+
+1. ADD CORRESPONDING RIGHTS TO SH FILES:
+sudo chmod u+x change_date.sh
+sudo chmod u+x restore_date.sh
+
+2. EDIT SUDOERS FILE AND ADD NEXT LINE AT THE BOTTOM:
+sudo visudo -f /etc/sudoers
+
+[your_username] ALL=(ALL) NOPASSWD: ALL
+[your_username] ALL = (root) NOPASSWD: /path/to/change_date.sh
+[your_username] ALL = (root) NOPASSWD: /path/to/restore_date.sh
+
+3. SAVE AND EXIT
+
+NOW YOU CAN RUN THOSE PARTICULAR BASH SCRIPTS WITHOUT PASSWORD PROMPT
