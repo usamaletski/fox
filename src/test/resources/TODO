@@ -1,0 +1,20 @@
+TODO
+
+HIGH:
++ Make desktop.application.url / mobile.application.url properties in config.properties and implement the parametrization for tests
+- Implement "Logout" method at the end for each test
+
+MEDIUM:
+- backToDefault method (setup-db, db-load, etc)
+- Reporting using Allure http://perfect-test.com/index.php/ru/technologies-menu-rus/other-technologies-menu-rus/20-not-categorised-technologies-rus
+- Switch off the translator in Chrome http://computelogy.com/2014/10/how-to-manually-force-google-chrome-to-translate-web-page/
+- ??? Add elements/text resources from PageObject to config.properties (write getPropertyValueByName method in TestConfig class) ???
+- Migrate test cases running to TestSuit.xml
+
+LOW:
+- Write method red selection for used element (merge from smartFramework)
+- Write documentation: Project structure
+- Write documentation: Environment setup
+
+
+
