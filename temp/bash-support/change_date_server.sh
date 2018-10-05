@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh root@citest.desk-net.com date 0209183018
+ssh root@****.****.com date 0209183018

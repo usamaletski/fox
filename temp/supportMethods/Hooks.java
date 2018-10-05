@@ -24,7 +24,7 @@ public class Hooks {
         System.out.println("\nINFO: Removing Search Indexes...");
         long startTime, elapsedTime;
         startTime = System.currentTimeMillis();
-        String rmIndexCmd = "ssh root@" + TestRunner.config.get("siteHost") + " '/etc/init.d/desknet-lucene stop; rm -r /var/log/tomcat8/index; /etc/init.d/desknet-lucene start; sleep 10'";
+        String rmIndexCmd = "ssh root@" + TestRunner.config.get("siteHost") + " '/etc/init.d/*******lucene stop; rm -r /var/log/tomcat8/index; /etc/init.d/*******lucene start; sleep 10'";
         Process p = Runtime.getRuntime().exec(new String[]{"bash", "-c", rmIndexCmd});
         int exitVal = p.waitFor();
         elapsedTime = System.currentTimeMillis() - startTime;
@@ -51,7 +51,7 @@ public class Hooks {
                 "' --password='" + TestRunner.mysql.get("dbPwd") +
                 "' -h " + TestRunner.mysql.get("dbHost") +
                 " -P " + TestRunner.mysql.get("dbPort") +
-                " desknet_qa < \"" + System.getProperty("user.dir") + "/sampleData/sample_data.sql\"";
+                " d_qa < \"" + System.getProperty("user.dir") + "/sampleData/sample_data.sql\"";
         Process p = Runtime.getRuntime().exec(new String[]{"bash", "-c", restoreCmd});
         int exitVal = p.waitFor();
         if (exitVal != 0) {
@@ -88,13 +88,13 @@ public class Hooks {
 
     @Before("@resetOrg1")
     public void resetOrg1() throws SQLException, ClassNotFoundException {
-        MySql.QueryExecution("DELETE FROM user_last_used_department WHERE user_id = 99038");
+        MySql.QueryExecution("DELETE FROM ******* WHERE **** = ********");
     }
 
     @After("@rollbackCrossUser")
     public void rollbackCrossUser() throws SQLException, ClassNotFoundException {
-        MySql.QueryExecution("insert into user_organization (user_id, organization_id, read_only, personal_access_only, internal, status, task_confirmation) " + "values (1030616, 99000, 'N', 'N', 'N', 0, 2)");
-        MySql.QueryExecution("insert into user_department (department_id, user_id, STATUS) values (99053, 1030616, 0)");
+        MySql.QueryExecution("insert into ****** (****id, ****_id, read_only, ***, **, ***, *****) " + "values (*****, ******, '**', '**', '*', *, *)");
+        MySql.QueryExecution("insert into user_department (***, **, STATUS) values (*****, *****, *****)");
     }
 
     @Before("@changeDate")

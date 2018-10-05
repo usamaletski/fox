@@ -1,4 +1,4 @@
-## Deploy build on VM (vm09.intetics.com as example)
+## Deploy build on VM (vm09.secret.com as example)
 
 #### 1. Install required packages 
 `sudo apt-get update && sudo apt-get install openssh`
@@ -30,10 +30,10 @@ The key fingerprint is:
 ```
 
 #### 3. Add your public key to _authorized_keys_ on server
-`cat ~/.ssh/id_rsa.pub | ssh root@vm09.intetics.com 'cat >> ~/.ssh/authorized_keys'`
+`cat ~/.ssh/id_rsa.pub | ssh root@vm09.secret.com 'cat >> ~/.ssh/authorized_keys'`
 
-#### 4. From now on you can log into vm09.intetics.com as ROOT without password
-`ssh root@vm09.intetics.com`
+#### 4. From now on you can log into vm09.secret.com as ROOT without password
+`ssh root@vm09.secret.com`
 
 #### 5. Copy all required JARs to _/path/to/build-deploy_ folder and execute deployment script
 `./deploy_build.sh`
