@@ -1,8 +1,8 @@
 ## Clone and properly configure framework
 1. Clone the project
 ```console
-git clone git@git.intetics.com:CW_0426_Desk_Net/CW_0426_DeskNet_QA_AutoTests.git
-cd CW_0426_DeskNet_QA_AutoTests
+git clone git@git.*********.git
+cd CW_*****QA_AutoTests
 ```
 
 2. Import project into IntelliJ Idea
@@ -11,16 +11,16 @@ cd CW_0426_DeskNet_QA_AutoTests
 ```
 seleniumEnvironment=**docker**
 ...
-siteUrl=**https://vm09.intetics.com:4443**
-siteHost=**vm09.intetics.com**
+siteUrl=**https://*****
+siteHost=**vm*********
 ...
 ```
 5. Modify _mysql.properties_
 ```
-dbUrl=jdbc:mysql://**vm09.intetics.com**:3306/desknet_qa
-dbHost=**vm09.intetics.com**
-dbUname=desknet
-dbPwd=**desknet**
+dbUrl=jdbc:mysql://*******:3306/d_qa
+dbHost=**vm**********
+dbUname=*******
+dbPwd=*****
 ```
 
 6. Ignore local changes in property files
